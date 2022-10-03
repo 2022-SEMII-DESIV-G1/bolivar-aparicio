@@ -1,0 +1,44 @@
+div{
+    height: auto;
+    width: 35vw;
+}
+
+#contactinfo{
+    display:block;
+    
+}
+
+hr{
+    border-color: #375e97;
+}
+
+#card{
+    padding:10px;
+    display: block;
+    border: 1px solid black ;
+    margin:10px;
+}
+h1{
+    color:#375e97;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr{
+    /* color:#375e97 */
+    color:red;
+}
+h2{
+    color:#999999;
+}
+
+a{
+    color:#fb6542;
+}
+
+#contact{
+    color: black;
+    
+}
+p{
+    font-family:Arial, Helvetica, sans-serif;
+}
