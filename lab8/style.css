@@ -1,0 +1,41 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.caja{
+    padding: 10px;
+    margin: 50px;
+    background: rgb(16,51,94);
+    width: 50vw;
+    height: 50vh;
+    color: white;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Limpiar{
+    background: red;
+}
+#Calcular{
+    background:lightblue;
+}
+
+.result{
+    display: inline;
+}
+
+h2{
+    font-size: 30px;
+    margin: 5px;
+    padding: 5px;
+}
+
+p{
+    font-size: 20px;
+}
+
