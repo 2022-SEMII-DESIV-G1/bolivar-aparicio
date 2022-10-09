@@ -1,32 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+  --text: #000;
+  --bg: #fff;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fff;
+    --bg: #000;
+  }
+}
+/*-----------Style del cuerpo -----------------*/
 .contenedor{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 .caja{
     padding: 10px;
-    margin: 50px;
     background: rgb(16,51,94);
     width: 50vw;
-    height: 50vh;
+    height: 40vh;
     color: white;
     font-family:'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 15px;
+}
+label{
+    margin: 500px 20px 50px 100px;
+    font-size: 25px;
+    
 }
 
+input{
+    width: 25vw;
+    height: 05vh;
+    border-radius: 10px;
+    font-size: 25px;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+/*--------------Style de botones----------*/
+.button{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 30px;
+}
 #Limpiar{
+    margin: 0.5rem;
+    padding: 0.6rem;
     background: red;
+    border-radius: 20px;
+    color: white;
+    width: 90px;
 }
 #Calcular{
-    background:lightblue;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background:rgb(50,134,247);
+    border-radius: 20px;
+    color: white;
+    width: 90px;
 }
 
+/*----------Style de Resultados-----------*/
+
 .result{
-    display: inline;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    align-self: flex-start;
 }
 
 h2{
@@ -37,5 +93,9 @@ h2{
 
 p{
     font-size: 20px;
+    align-self: flex-start;
+    
 }
+
+
 

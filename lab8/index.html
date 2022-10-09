@@ -11,17 +11,19 @@
     <div class="contenedor">
         <div class="caja">
             <h1>Contador de letras</h1>
-            <label for="">Cadena de Texto</label>
-            <input type="text" name="" id="Blank">
+            <label for="Cadena">Cadena de Texto</label>
+            <input type="text" name="" id="text">
                 <div class="button">
-                    <button id="Limpiar">Limpiar</button>
-                    <button id="Calcular">Calcular</button>
+                    <button onclick="clean()" id="Limpiar">Limpiar</button>
+                    <button onclick="send()" id="Calcular">Calcular</button>
                 </div>
         </div>
+        <div class="result">
+            <h2>Letras</h2>
+            <p id="output"> </p>
+        </div>
     </div>
-    <div class="result">
-        <h2>Letras</h2>
-        <p> A: 24</p>
-    </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>
