@@ -1,30 +1,27 @@
-var text;
+var cadena,acumulado;
 document.getElementById("output").addEventListener("click", clean);
 
 function clean(){
-    document.getElementById("text").value = " ";
+    document.getElementById("text").value = " "
+    document.getElementById("output").innerHTML = "";
 }
 
 function send(){
-    text = document.getElementById("text").value;
-   // console.log(text);
-
-    function contarCaracteres(cadena) 
-    {
-        var cont=[];                                  //inicializar el contador
-        ncad=cadena.split('');                        //dividir la cadena en caracteres
-            for (var i = 0; i < cadena.length; i++) {     //recorrer la cadena
-            letra=ncad[i].charCodeAt();                 //pasar cada letra a código ascii
-            //antes de sumarlo verificar si ya existe en cont, de no ser así inicializarlo
-            cont[letra]==undefined ? cont[letra]=1 : cont[letra]++  
-            };
-        total={};                                     //para guardar el resultado
-            for (var i in cont)                           //recorrer el contador
-            total[String.fromCharCode(i)]=cont[i];      //pasar el caracter de ascii a string y pasarle la cantidad
-            return total;
-        
-    }
-    console.log(contarCaracteres(text));
+    cadena = document.getElementById("text").value;
+    acumulado=(contarCaracteres(cadena));
+    function contarCaracteres() {
+        const texto = document.getElementById('text').
+        value.trim().toLowerCase().split('');
+        const repeticiones = {};
+        texto.forEach( ( letra ) => {
+          repeticiones[ letra ] = ( repeticiones[ letra ] || 0 ) + 1;
+        });
+        for( let letra in repeticiones ) {
+          const text = `${ letra } = ${ repeticiones[ letra ] }<br>`;
+          document.getElementById('output').innerHTML += text;
+        }
     
-}
-
+    }
+  
+  
+  }
