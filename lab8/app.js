@@ -1,9 +1,12 @@
 var cadena,acumulado;
 document.getElementById("output").addEventListener("click", clean);
+const btn=document.getElementById("Limpiar");
 
 function clean(){
     document.getElementById("text").value = " "
     document.getElementById("output").innerHTML = "";
+    
+    btn.hidden=true;
 }
 
 function send(){
@@ -22,6 +25,6 @@ function send(){
         }
     
     }
-  
+    btn.hidden=false;
   
   }
