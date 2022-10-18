@@ -1,0 +1,10 @@
+.caja{
+    width: 50vw;
+    height: 100vh;
+    display: block;
+}
+
+.caja-1{
+    display: block;
+    background: black;
+}
