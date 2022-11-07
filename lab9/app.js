@@ -1,3 +1,7 @@
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 function buscar(){
     let num = [
         [75],
@@ -20,7 +24,7 @@ function buscar(){
     var i,row= 5, rep;
     for (i = 1; i <= row; i++) {
         for (rep = 1; rep <= i; rep++) {
-            document.write("*");
+            document.write(getRandomInt(9));
         }
         document.write("<br>");
     }
