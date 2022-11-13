@@ -8,4 +8,9 @@
 .contenedor{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;  
+}
+#imghead{
+    width: 25%;
+    height: 25%;
 }
