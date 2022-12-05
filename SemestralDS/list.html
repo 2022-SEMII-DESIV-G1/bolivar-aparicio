@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de autos</title>
+</head>
+<body>
+
+    <form id="car-form" action="">
+        <label for="name">Nombre del Auto</label>
+        <input id="name" name="name" type="text">
+        <label for="year">Año del Auto</label>
+        <input id="year" name="year" type="text">
+        <button type="submit">Agregar</button>
+    </form>
+    <div class="cars">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const cars= document.querySelector('.cars');
+        const form = document.querySelector('#car-form');
+        const name = document.querySelector('#name');
+        const year = document.querySelector('#year');
+
+        form.addEventListener('submit',async (e)=>
+        {
+            e.preventDefault();
+            const {data} = await axios.post('http://localhost:4567/wrx',{name:name.value, year:year.value});
+            let newList = '<ul>';
+            for( const car of data.cars)
+            {
+                newList+=`<li>${car.name} (${car.year})</li>`;
+            }
+            newList+='</ul>'
+            cars.innerHTML =newList;
+
+        })
+    </script>
+</body>
+</html>
