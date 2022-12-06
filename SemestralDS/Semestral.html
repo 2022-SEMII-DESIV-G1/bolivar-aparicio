@@ -19,6 +19,8 @@
     <form id="piramide-form" action="">
         <label for="name">Ingrese titulo</label>
         <input id="name" name="name" type="text">
+        <label for="height">Altura de la piramide</label>
+        <input type="number" name="height" id="height" required />
         <label for="piramide">Ingrese Piramide</label>
         <input id="piramide" name="piramide" type="text">
         <button type="submit">Agregar</button>
@@ -27,34 +29,9 @@
 
     </div>
 </div>
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const Semestral= document.querySelector('.Semestral');
-        const form = document.querySelector('#piramide-form');
-        const name = document.querySelector('#name');
-        const piramide = document.querySelector('#piramide');
-        const array = piramide.value.split(",");
-        const render = (piramidesResponse)=>
-        {   let newList = '<ul>';
-            for( const piramide of piramidesResponse)
-            {
-                newList+=`<li><a href="detalle.html?q=${piramide.id}"> ${piramide.name}</a></li>`;
-            }
-            newList+='</ul>'
-            Semestral.innerHTML =newList;
-        }
-
-        form.addEventListener('submit',async (e)=>
-        {
-            e.preventDefault();
-            const {data} = await axios.post('http://localhost:4567/Semestral',{name:name.value, piramide:piramide.value});
-            render(data.piramides);
-        });
-
-        (async()=>{
-            const {data} = await axios.get('http://localhost:4567/Semestral');
-            render(data.piramides);
-        })();
     </script>
 </body>
 </html>
