@@ -1,6 +1,30 @@
-#imghead{
-    width: 25%;
-    height: 25%;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+--text: #000;
+--bg: #fff;
+}
+
+body {
+    font-family:'Arial Narrow', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --text: #fff;
+    --bg: #000;
+        }
+}
+
+.contenedor
+{
+    padding: 10px;
+    background: rgb(16,51,94);
+    color: white;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    border-radius: 15px;
 }
 
 .Semestral{
@@ -9,6 +33,16 @@
     margin: 15px;
     padding: 20px;
     font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.head{
+    margin: 15px;
+    padding: 15px;
+}
+
+ul{
+    list-style: none;
 }
 
 #piramide-form{
@@ -17,5 +51,29 @@
         margin: 15px;
         padding: 20px;
         font-size: 15px;
-    
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input{
+    width: 20vw;
+    height: 05vh;
+    border-radius: 10px;
+    font-size: 13px;
+}
+button{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+label{
+    margin: 10px;
+}
+a{
+    color: white;
+}
+
+.response{
+    width: 25vw;
+    height: 25vh;
 }
