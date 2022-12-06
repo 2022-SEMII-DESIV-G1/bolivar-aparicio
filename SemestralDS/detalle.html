@@ -22,9 +22,9 @@
           const response = document.querySelector('.response');
           const {data} = await axios.get(`http://localhost:4567/Semestral/${urlParams.get("q")}`);
           console.log(data)
-            const result = data.piramide.split(',').map((id) => Number (id));
+            const result = data.piramide.split(',').map((id) => `${id}<br/>`);
             // result. forEach (element => console.log(element)) ;
-          response.innerHTML = JSON.stringify(result)+"<br/>";
+          response.innerHTML = JSON.stringify(result);
       })();
     </script>
 </body>
