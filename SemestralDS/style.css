@@ -1,0 +1,21 @@
+#imghead{
+    width: 25%;
+    height: 25%;
+}
+
+.Semestral{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+#piramide-form{
+        display: flex;
+        flex-direction: row;
+        margin: 15px;
+        padding: 20px;
+        font-size: 15px;
+    
+}
