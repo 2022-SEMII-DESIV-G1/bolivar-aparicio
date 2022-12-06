@@ -24,20 +24,28 @@
         const form = document.querySelector('#car-form');
         const name = document.querySelector('#name');
         const year = document.querySelector('#year');
+        const render = (carsResponse)=>
+        {   let newList = '<ul>';
+            for( const car of carsResponse)
+            {
+                newList+=`<li><a href="detail.html?q=${car.id}"> ${car.name} (${car.year})</a></li>`;
+                // newList+=`<li><a href="detail.html">${car.name} (${car.year})</a></li>`;
+            }
+            newList+='</ul>'
+            cars.innerHTML =newList;
+        }
 
         form.addEventListener('submit',async (e)=>
         {
             e.preventDefault();
             const {data} = await axios.post('http://localhost:4567/wrx',{name:name.value, year:year.value});
-            let newList = '<ul>';
-            for( const car of data.cars)
-            {
-                newList+=`<li>${car.name} (${car.year})</li>`;
-            }
-            newList+='</ul>'
-            cars.innerHTML =newList;
+            render(data.cars);
+        });
 
-        })
+        (async()=>{
+            const {data} = await axios.get('http://localhost:4567/wrx');
+            render(data.cars);
+        })();
     </script>
 </body>
 </html>
