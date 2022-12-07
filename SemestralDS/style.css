@@ -59,6 +59,7 @@ input{
     height: 05vh;
     border-radius: 10px;
     font-size: 13px;
+    box-shadow: 25px;
 }
 button{
     display: flex;
@@ -74,6 +75,10 @@ a{
 }
 
 .response{
-    width: 50vw;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 75vw;
+    height: 75vh;
+
 }

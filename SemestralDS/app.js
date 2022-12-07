@@ -7,7 +7,7 @@
         {   let newList = '<ul>';
             for( const piramide of piramidesResponse)
             {
-                newList+=`<li><a href="detalle.html?q=${piramide.id}"> ${piramide.name}</a></li>`;
+                newList+=`<li><a href="detalle.html?q=${piramide.id}"> #${piramide.id} ${piramide.name}</a></li>`;
             }
             newList+='</ul>'
             Semestral.innerHTML =newList;

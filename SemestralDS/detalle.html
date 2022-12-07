@@ -20,7 +20,7 @@
             const response = document.querySelector('.response');
             const {data} = await axios.get(`http://localhost:4567/Semestral/${urlParams.get("q")}`);
             console.log(data)
-            const result = data.piramide.split(',').map((id) => `${id}<br/>`);
+            const result = data.piramide.split(',').map((id) => `<br/>${id}<br/>`);
             console.log(result);
             // response.innerHTML = JSON.stringify(result);
             const totalNumberofRow = result.lenght;
@@ -32,6 +32,7 @@
                 output+=j+' ';
             }
             console.log(output);
+            
             output='';
             
         }
