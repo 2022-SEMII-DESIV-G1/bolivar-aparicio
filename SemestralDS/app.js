@@ -1,3 +1,4 @@
+        
         const Semestral= document.querySelector('.Semestral');
         const form = document.querySelector('#piramide-form');
         const name = document.querySelector('#name');
