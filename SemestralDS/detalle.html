@@ -18,13 +18,29 @@
    
     <script>
         (async()=>{
-          const urlParams = new URLSearchParams(window.location.search);
-          const response = document.querySelector('.response');
-          const {data} = await axios.get(`http://localhost:4567/Semestral/${urlParams.get("q")}`);
-          console.log(data)
+            const urlParams = new URLSearchParams(window.location.search);
+            const response = document.querySelector('.response');
+            const {data} = await axios.get(`http://localhost:4567/Semestral/${urlParams.get("q")}`);
+            console.log(data)
             const result = data.piramide.split(',').map((id) => `${id}<br/>`);
-          response.innerHTML = JSON.stringify(result);
-      })();
+            console.log(result);
+            // response.innerHTML = JSON.stringify(result);
+            const totalNumberofRow = result.lenght;
+        let output='';
+        for(let i=1;i<=totalNumberofRow;i++)
+        {
+            for(let j=1;j<=i;j++)
+            {
+                output+=j+' ';
+            }
+            console.log(output);
+            output='';
+            
+        }
+        response.innerHTML = JSON.stringify(result);
+        }
+        
+        )();
     </script>
 </body>
 </html>

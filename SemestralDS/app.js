@@ -1,9 +1,7 @@
         const Semestral= document.querySelector('.Semestral');
         const form = document.querySelector('#piramide-form');
         const name = document.querySelector('#name');
-        const height = document.querySelector("#height");
         const piramide = document.querySelector('#piramide');
-        // const array = piramide.value.split(",");
         const render = (piramidesResponse)=>
         {   let newList = '<ul>';
             for( const piramide of piramidesResponse)
@@ -26,4 +24,3 @@
             const {data} = await axios.get('http://localhost:4567/Semestral');
             render(data.piramides);
         })();
-      
