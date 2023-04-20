@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+--text: #000;
+--bg: #fff;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image:url(./imgs/2122294.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text);
+    font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --text: #fff;
+    --bg: #000;
+        }
+}
+
+:Root{
+    --bg: #000;
+    --eva01:rgb(98,32,103);
+    --eva02:rgb(85,232,79);
+    --white:#fff
+}
+
+h1{
+    background:linear-gradient(to right,var(--eva02),05%,var(--eva01));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: 500px;
+    font-size: 24px;
+}
+
+nav{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: black;
+    font-family: sans-serif;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 10000;
+    color: #fff;
+    }
+    nav .logo{
+    font-size: 24px;
+    font-weight:black;
+    margin: 8px;
+    }
+    nav .barnav{
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    margin-right: 30px;
+    }
+    nav .barnav div{
+    padding: 10px 20px;
+    }
+
+    h2{
+        margin-top: 60px;
+    }
+
+    nav .barnav a{
+        text-decoration: none;
+        background-image: linear-gradient(to right, var(--eva02),10%,var(--eva01));
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        color: #fff;
+    }
+
+    nav .barnav a:hover, a:focus {
+        background-size: 100% 2px;
+    }
+
+    aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Contenedor  li{
+        display: inline;
+        margin: 10px;
+        padding: 10px;
+        border:  1px solid white;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom, var(--eva02),10%,var(--eva01));
+    }
+
+    a{
+        text-decoration:underline;
+        color: white;
+    }
+    a:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+    /* Slider */
+
+    .contenedorimg{
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider-container {
+        display: flex;
+        width: 15%;
+        height: 15%;
+        overflow-x: scroll;
+        border-radius: 10%;
+      }
+      
+      .slider-container img {
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* End of Sliders */
